@@ -16,6 +16,8 @@
     "react/no-danger": [0],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
     "no-console": [0],
     "react/function-component-definition": [
       "error",
