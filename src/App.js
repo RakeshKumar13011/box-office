@@ -1,9 +1,9 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Starred from './pages/Starred';
 import Show from './pages/Show';
-import { ThemeProvider } from 'styled-components';
 
 const theme = {
   mainColors: {

@@ -1,4 +1,5 @@
 /* eslint-disable no-restricted-globals */
+/* eslint no-underscore-dangle: 0 */
 
 // This service worker can be customized!
 // See https://developers.google.com/web/tools/workbox/modules
@@ -19,11 +20,14 @@ clientsClaim();
 // Their URLs are injected into the manifest variable below.
 // This variable must be present somewhere in your service worker file,
 // even if you decide not to use precaching. See https://cra.link/PWA
+// eslint no-underscore-dangle: 0
 precacheAndRoute(self.__WB_MANIFEST);
 
 // Set up App Shell-style routing, so that all navigation requests
 // are fulfilled with your index.html shell. Learn more at
 // https://developers.google.com/web/fundamentals/architecture/app-shell
+
+// eslint-disable-next-line prefer-regex-literals
 const fileExtensionRegexp = new RegExp('/[^/?]+\\.[^/]+$');
 registerRoute(
   // Return false to exempt requests from being fulfilled by index.html.
@@ -43,6 +47,7 @@ registerRoute(
 
     return true;
   },
+  // eslint-disable-next-line prefer-template
   createHandlerBoundToURL(process.env.PUBLIC_URL + '/index.html')
 );
 

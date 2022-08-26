@@ -1,11 +1,10 @@
 import React from 'react';
-import ShowCard from './ShowCard';
-
-import { FlexGrid } from '../Styled';
-
-import IMAGE_NOT_FOUND from '../../images/not-found.png';
-import { useShows } from '../../misc/custom-hooks';
+// eslint-disable-next-line no-unused-vars
 import { type } from '@testing-library/user-event/dist/type';
+import { useShows } from '../../misc/custom-hooks';
+import { FlexGrid } from '../Styled';
+import ShowCard from './ShowCard';
+import IMAGE_NOT_FOUND from '../../images/not-found.png';
 
 const ShowGrid = ({ data }) => {
   const [starredShows, dispatchStarred] = useShows();

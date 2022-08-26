@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { apiGet } from '../misc/config';
+import { useLastQuery } from '../misc/custom-hooks';
 import ActorGrid from '../components/actor/ActorGrid';
 import CustomRadio from '../components/CustomRadio';
 import {
@@ -8,8 +10,6 @@ import {
 } from './Home.styled';
 import MainPageLayout from '../components/MainPageLayout';
 import ShowGrid from '../components/show/ShowGrid';
-import { apiGet } from '../misc/config';
-import { useLastQuery } from '../misc/custom-hooks';
 
 const Home = () => {
   const [input, setInput] = useLastQuery();
